@@ -2,15 +2,27 @@
 
 ## Project Name
 
-The name of your project.
+Oracle: 
+Dungeons and Dragons Spell Referencer 
 
 ## Project Description
 
-Use this section to describe your final project and perhaps any links to relevant sites that help convey the concept and\or functionality.
+Allows DM and players to quickly reference and find spells. Displays damage(by spell slot), damage type, if it needs concentration, and casting time. 
+
+<!-- Use this section to describe your final project and perhaps any links to relevant sites that help convey the concept and\or functionality. -->
 
 ## API and Data Sample
 
-Specify the API you are using and include a link. Show us a snippet of JSON returned by your API so we know you can access it and get the info you need
+https://www.dnd5eapi.co/api/spells
+
+Gives the list of spells
+
+
+https://www.dnd5eapi.co/api/spells/acid-arrow
+
+Gives a specific spell. 
+
+<!-- Specify the API you are using and include a link. Show us a snippet of JSON returned by your API so we know you can access it and get the info you need -->
 
 ## Wireframes
 
@@ -21,17 +33,23 @@ Upload images of your wireframes to an image hosting site or add them to an asse
 The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
 
 #### MVP 
-*These are examples only. Replace with your own MVP features.*
+<!-- *These are examples only. Replace with your own MVP features.* -->
 
 - Find and use external api 
 - Render data on page 
-- Allow user to choose favorites 
+- Allow user to type in a spell or cantrip. Press button to search
+- User recieves information regarding spell/cantrip
+- Make it compartible on desktop and mobile.
+- Commit daily
+- 
 
 #### PostMVP  
-*These are examples only. Replace with your own Post-MVP features.*
+<!-- *These are examples only. Replace with your own Post-MVP features.* -->
 
 - Add second API
 - Use local storage to save user favorites
+- Create a button to "flip" the page 
+- Add more style to the page. 
 
 ## Project Schedule
 
@@ -61,9 +79,17 @@ Time frames are also key in the development cycle.  You have limited time to cod
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Adding Form | H | 3hrs| 3.5hrs | 3.5hrs |
+|HTML, CSS, JS setup|M| 0.5hr|
+|Setting API|M| 1.5hr|
+|User Input Functionality| H| 2hrs|
+|Styling CSS|H|3hrs|
+|Add media query|H|2hrs|
+|Fetching and utilizing API data|H|4hrs|
+
 | Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
+|
 | Total | H | 6hrs| 5hrs | 5hrs |
+
 
 ## Code Snippet
 
