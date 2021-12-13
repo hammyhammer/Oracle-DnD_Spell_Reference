@@ -3,16 +3,15 @@
 ## Project Name
 
 Oracle: 
-Dungeons and Dragons Spell Referencer 
+Dungeons and Dragons Quick Spell Reference 
 
 ## Project Description
 
-Allows DM and players to quickly reference and find spells. Displays damage(by spell slot), damage type, if it needs concentration, and casting time. 
+Allows DM and players to quickly reference and find spells. Displays damage(by spell slot), damage type, if it needs concentration, and casting time. To make combat more smooth and faster.
 
 <!-- Use this section to describe your final project and perhaps any links to relevant sites that help convey the concept and\or functionality. -->
 
 ## API and Data Sample
-
 https://www.dnd5eapi.co/api/spells
 
 Gives the list of spells
@@ -25,8 +24,15 @@ Gives a specific spell.
 <!-- Specify the API you are using and include a link. Show us a snippet of JSON returned by your API so we know you can access it and get the info you need -->
 
 ## Wireframes
+https://whimsical.com/dnd-spell-referencer-D3dfYeTTvjpGzoz7B6wdh7
 
-Upload images of your wireframes to an image hosting site or add them to an assets folder in your repo and link them here with a description of each specific wireframe.
+Browser Version
+
+
+https://whimsical.com/mobile-spell-reference-Aey8ZVM2Y3tcsuodFf2Dqc
+
+Mobile Version
+<!-- Upload images of your wireframes to an image hosting site or add them to an assets folder in your repo and link them here with a description of each specific wireframe. -->
 
 ### MVP/PostMVP
 
@@ -35,10 +41,11 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 #### MVP 
 <!-- *These are examples only. Replace with your own MVP features.* -->
 
-- Find and use external api 
-- Render data on page 
+- Find and use external api  
 - Allow user to type in a spell or cantrip. Press button to search
 - User recieves information regarding spell/cantrip
+- Render the data on the page that can be read and interrepted easily. 
+- Allow a reset button to search different spells
 - Make it compartible on desktop and mobile.
 - Commit daily
 - 
@@ -46,9 +53,9 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 #### PostMVP  
 <!-- *These are examples only. Replace with your own Post-MVP features.* -->
 
-- Add second API
+- Add second API. Adding a classes option.
 - Use local storage to save user favorites
-- Create a button to "flip" the page 
+- Create a button to "flip" the page. (Animation)
 - Add more style to the page. 
 
 ## Project Schedule
@@ -80,26 +87,29 @@ Time frames are also key in the development cycle.  You have limited time to cod
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
 |HTML, CSS, JS setup|M| 0.5hr|
-|Setting API|M| 1.5hr|
-|User Input Functionality| H| 2hrs|
-|Styling CSS|H|3hrs|
-|Add media query|H|2hrs|
-|Fetching and utilizing API data|H|4hrs|
-
-| Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
-|
-| Total | H | 6hrs| 5hrs | 5hrs |
+|Setting API|M| 2.5hr|
+|User Input Functionality| H| 5hrs|
+|Creating a remove function|H|3.5hrs|
+|Positioning data properly|H|5.5hrs|
+|Styling CSS|H|3.5hrs|
+|Add media query|H|4hrs|
+|Fetching and utilizing API data|H|5hrs|
+|Creating a header| H| 2hrs|
+|Creating a footer|H| 2hrs|
+| Working with API | H | 3hrs| 
+|Adding local storage|M| 4hrs|
+| Total | NA| 40hrs| NA | NA |
 
 
 ## Code Snippet
 
-Use this section to include a brief code snippet of functionality that you are proud of and a brief description.  
+<!-- Use this section to include a brief code snippet of functionality that you are proud of and a brief description.  
 
 ```
 function reverse(string) {
 	// here is the code to reverse a string of text
 }
-```
+``` -->
 
 ## Change Log
- Use this section to document what changes were made and the reasoning behind those changes.  
+ <!-- Use this section to document what changes were made and the reasoning behind those changes.   -->
