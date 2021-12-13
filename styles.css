@@ -4,3 +4,8 @@ h1 {
 
 }
 
+.above-book {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,6 +1,7 @@
 const divLeftPage = document.querySelector(".left-page");
 const divRightPage = document.querySelector(".right-page");
-
+const searchButton = document.querySelector("#search-button");
+const blankSpace = document.querySelector("#blank-space");
 
 async function fetchData(spell) {
   const url = `https://www.dnd5eapi.co/api/spells/${spell}`;
@@ -52,9 +53,25 @@ function showSpellData(data) {
   //Showing Damage Type
   const damageType = document.createElement("p");
   damage.innerText = `Damage Type:${data.damage.damage_type}`
+  divRightPage.appendChild(damageType);
 
   //Showing Damage per Spell Slot
   const damage = document.createElement("p");
   damage.innerText = `Damage: ${data.damage.damage_at_slot_level}`;
   divRightPage.appendChild(damage)
+}
+
+// Search functionality
+searchButton.addEventListener("click", handleInput);
+
+function handleInput() {
+  let inputValue = blankSpace.ariaValueMax;
+  blankSpace.value = "";
+  fetchData(inputValue)
+  removeSpell()
+}
+
+function removeSpell() {
+  divRightPage.innerHTML = "";
+  divLeftPage.innerHTML = "";
 }
