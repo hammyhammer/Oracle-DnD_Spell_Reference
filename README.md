@@ -7,7 +7,7 @@ Dungeons and Dragons Quick Spell Reference
 
 ## Project Description
 
-Allows DM and players to quickly reference and find spells. Displays damage(by spell slot), damage type, if it needs concentration, and casting time. To make combat more smooth and faster.
+Allows DM and players to quickly reference and find spells. Displays damage(by spell slot), damage type, if it needs concentration, and casting time. The ambition is to make combat go faster and more smoothly.
 
 <!-- Use this section to describe your final project and perhaps any links to relevant sites that help convey the concept and\or functionality. -->
 
