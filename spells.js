@@ -9,13 +9,13 @@ async function fetchData(spell) {
   // console.log(response);
   const spellData = response.data;
   console.log(spellData)
-  // spellData.forEach(spellObj => {
-  //   showSpellData(spellObj);
-  // })
+  spellData.forEach(spellObj => {
+    showSpellData(spellObj);
+  })
 }
 // const gettingSpellData = response.data.data.results
-fetchData("cure-wounds");
-
+// fetchData();
+console.log
 
 
 //Showing the Spell information
@@ -64,14 +64,15 @@ function showSpellData(data) {
 // Search functionality
 searchButton.addEventListener("click", handleInput);
 
-function handleInput() {
+function handleInput(event) {
+  event.preventDefault();
   let inputValue = blankSpace.ariaValueMax;
   blankSpace.value = "";
   fetchData(inputValue)
-  removeSpell()
+  // removeSpell()
 }
 
-function removeSpell() {
-  divRightPage.innerHTML = "";
-  divLeftPage.innerHTML = "";
-}
+// function removeSpell() {
+//   divRightPage.innerHTML = "";
+//   divLeftPage.innerHTML = "";
+// }
