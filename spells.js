@@ -8,21 +8,21 @@ async function fetchData(spell) {
   // console.log(response);
   const spellData = response.data;
   console.log(spellData)
-  // spellData.forEach(spellObj => {
-  //   showSpellData(spellObj);
-  // })
+  spellData.forEach(spellObj => {
+    showSpellData(spellObj);
+  })
 }
 // const gettingSpellData = response.data.data.results
-fetchData("fireball");
+fetchData("cure-wounds");
+
+
 
 //Showing the Spell information
-
 //Showing the name of spell
 function showSpellData(data) {
   const spellName = document.createElement("p");
   spellName.innerText = `${data.name}`;
   divLeftPage.appendChild(spellName);
-
 
   //Showing Casting time
   const castingTime = document.createElement("p");
@@ -57,4 +57,6 @@ function showSpellData(data) {
   const damage = document.createElement("p");
   damage.innerText = `Damage: ${data.damage.damage_at_slot_level}`;
   divRightPage.appendChild(damage)
-} 
+}
+
+showSpellData();
