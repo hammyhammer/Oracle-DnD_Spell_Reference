@@ -12,26 +12,116 @@ Allows DM and players to quickly reference and find spells. Displays damage(by s
 <!-- Use this section to describe your final project and perhaps any links to relevant sites that help convey the concept and\or functionality. -->
 
 ## API and Data Sample
-https://www.dnd5eapi.co/api/spells
+[Gives the list of spells](https://www.dnd5eapi.co/api/spells)
 
-Gives the list of spells
+```
+{
+    "count": 319,
+    "results": [
+        {
+            "index": "acid-arrow",
+            "name": "Acid Arrow",
+            "url": "/api/spells/acid-arrow"
+        },
+        {
+            "index": "acid-splash",
+            "name": "Acid Splash",
+            "url": "/api/spells/acid-splash"
+        },
+        {
+            "index": "aid",
+            "name": "Aid",
+            "url": "/api/spells/aid"
+        },
+        {
+            "index": "alarm",
+            "name": "Alarm",
+            "url": "/api/spells/alarm"
+        },
+        {
+            "index": "alter-self",
+            "name": "Alter Self",
+            "url": "/api/spells/alter-self"
+        },
+```
 
+[Gives a specific spell](https://www.dnd5eapi.co/api/spells/acid-arrow)
 
-https://www.dnd5eapi.co/api/spells/acid-arrow
+``` 
+{
+    "index": "acid-arrow",
+    "name": "Acid Arrow",
+    "desc": [
+        "A shimmering green arrow streaks toward a target within range and bursts in a spray of acid. Make a ranged spell attack against the target. On a hit, the target takes 4d4 acid damage immediately and 2d4 acid damage at the end of its next turn. On a miss, the arrow splashes the target with acid for half as much of the initial damage and no damage at the end of its next turn."
+    ],
+    "higher_level": [
+        "When you cast this spell using a spell slot of 3rd level or higher, the damage (both initial and later) increases by 1d4 for each slot level above 2nd."
+    ],
+    "range": "90 feet",
+    "components": [
+        "V",
+        "S",
+        "M"
+    ],
+    "material": "Powdered rhubarb leaf and an adder's stomach.",
+    "ritual": false,
+    "duration": "Instantaneous",
+    "concentration": false,
+    "casting_time": "1 action",
+    "level": 2,
+    "attack_type": "ranged",
+    "damage": {
+        "damage_type": {
+            "index": "acid",
+            "name": "Acid",
+            "url": "/api/damage-types/acid"
+        },
+        "damage_at_slot_level": {
+            "2": "4d4",
+            "3": "5d4",
+            "4": "6d4",
+            "5": "7d4",
+            "6": "8d4",
+            "7": "9d4",
+            "8": "10d4",
+            "9": "11d4"
+        }
+    },
+    "school": {
+        "index": "evocation",
+        "name": "Evocation",
+        "url": "/api/magic-schools/evocation"
+    },
+    "classes": [
+        {
+            "index": "wizard",
+            "name": "Wizard",
+            "url": "/api/classes/wizard"
+        }
+    ],
+    "subclasses": [
+        {
+            "index": "lore",
+            "name": "Lore",
+            "url": "/api/subclasses/lore"
+        },
+        {
+            "index": "land",
+            "name": "Land",
+            "url": "/api/subclasses/land"
+        }
+    ],
+    "url": "/api/spells/acid-arrow"
+}
+```
 
-Gives a specific spell. 
 
 <!-- Specify the API you are using and include a link. Show us a snippet of JSON returned by your API so we know you can access it and get the info you need -->
 
 ## Wireframes
-https://whimsical.com/dnd-spell-referencer-D3dfYeTTvjpGzoz7B6wdh7
+[Browser Display](https://whimsical.com/dnd-spell-referencer-D3dfYeTTvjpGzoz7B6wdh7)
 
-Browser Version
-
-
-https://whimsical.com/mobile-spell-reference-Aey8ZVM2Y3tcsuodFf2Dqc
-
-Mobile Version
+[Mobile Display](https://whimsical.com/mobile-spell-reference-Aey8ZVM2Y3tcsuodFf2Dqc)
 <!-- Upload images of your wireframes to an image hosting site or add them to an assets folder in your repo and link them here with a description of each specific wireframe. -->
 
 <!-- ### MVP/PostMVP
@@ -74,7 +164,7 @@ You are **responsible** for scheduling time with your squad to seek approval for
 |Dec 17| Presentations | Incomplete
 
 ## Priority Matrix
-![](https://whimsical.com/priority-matrix-6kzFUAKyDBqQe9NXnvMpi3")
+[Priority Matrix Graph](https://whimsical.com/priority-matrix-6kzFUAKyDBqQe9NXnvMpi3")
 <!-- Include a full list of features that have been prioritized based on the `Time and Importance` Matrix.  Link this image in a similar manner to your wireframes -->
 
 ## Timeframes
