@@ -74,7 +74,7 @@ You are **responsible** for scheduling time with your squad to seek approval for
 |Dec 17| Presentations | Incomplete
 
 ## Priority Matrix
-https://whimsical.com/priority-matrix-6kzFUAKyDBqQe9NXnvMpi3
+![](https://whimsical.com/priority-matrix-6kzFUAKyDBqQe9NXnvMpi3")
 <!-- Include a full list of features that have been prioritized based on the `Time and Importance` Matrix.  Link this image in a similar manner to your wireframes -->
 
 ## Timeframes
@@ -87,17 +87,19 @@ Time frames are also key in the development cycle.  You have limited time to cod
 | --- | :---: |  :---: | :---: | :---: |
 |HTML, CSS, JS setup|M| 0.5hr|
 |Setting API|M| 2.5hr|
-|User Input Functionality| H| 5hrs|
-|Creating a remove function|H|3.5hrs|
-|Positioning data properly|H|5.5hrs|
+|User Input Functionality| H| 2hrs|
+|Creating a remove function|H|3hrs|
+|Positioning data properly|H|3hrs|
+|Creating a reset button|H|2.5hrs
+|Creating searching functionality|H|3hrs
 |Styling CSS|H|3.5hrs|
-|Add media query|H|4hrs|
-|Fetching and utilizing API data|H|5hrs|
+|Add media query|H|3hrs|
+|Fetching and utilizing API data|H|3hrs|
 |Creating a header| H| 2hrs|
 |Creating a footer|H| 2hrs|
 | Working with API | H | 3hrs| 
 |Adding local storage|M| 4hrs|
-| Total | NA| 40hrs| NA | NA |
+| Total | NA| 37hrs| NA | NA |
 
 
 ## Code Snippet
