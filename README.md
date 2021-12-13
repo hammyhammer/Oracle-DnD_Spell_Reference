@@ -176,7 +176,7 @@ Time frames are also key in the development cycle.  You have limited time to cod
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
 |HTML, CSS, JS setup|M| 0.5hr|0.5|
-|Setting API|M| 2.5hr|
+|Setting API|M| 2.5hr|1.5hr|
 |User Input Functionality| H| 2hrs|
 |Creating a remove function|H|3hrs|
 |Positioning data properly|H|3hrs|
