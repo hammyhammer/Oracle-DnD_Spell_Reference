@@ -156,7 +156,7 @@ You are **responsible** for scheduling time with your squad to seek approval for
 |  Day | Deliverable | Status
 |---|---| ---|
 |Dec 10-12| Prompt / Wireframes / Priority Matrix / Timeframes | Complete
-|Dec 13| Project Approval | Incomplete
+|Dec 13| Project Approval | Complete
 |Dec 13| Core Application Structure (HTML, CSS, etc.) | Incomplete
 |Dec 14| Pseudocode / actual code | Incomplete
 |Dec 15| Initial Clickable Model  | Incomplete
@@ -175,7 +175,7 @@ Time frames are also key in the development cycle.  You have limited time to cod
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-|HTML, CSS, JS setup|M| 0.5hr|
+|HTML, CSS, JS setup|M| 0.5hr|0.5|
 |Setting API|M| 2.5hr|
 |User Input Functionality| H| 2hrs|
 |Creating a remove function|H|3hrs|
