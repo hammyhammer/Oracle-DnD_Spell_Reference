@@ -13,11 +13,10 @@ async function fetchData(spell) {
 }
 
 // fetchData();
-
 //Showing the Spell information
 //Showing the name of spell
 function showSpellData(data) {
-  const spellName = document.createElement("h3");
+  const spellName = document.createElement("h2");
   spellName.innerText = `${data.name}`;
   divLeftPage.appendChild(spellName);
 
@@ -45,16 +44,21 @@ function showSpellData(data) {
   const savingThrow = document.createElement("p")
   savingThrow.innerText = `Saving Throw:\n${data.dc.dc_type.name}`
   divLeftPage.appendChild(savingThrow);
+  // else {
+  //   const savingThrow = document.createElement("p");
+  //   savingThrow.innerText = "There is no Saving Throw";
+  //   divLeftPage.appendChild(savingThrow);
+  // };
 
-  // //Showing Damage Type
-  // const damageType = document.createElement("h2");
-  // damageType.innerText = `Damage Type: \n${data.damage.damage_type.name}`
-  // divRightPage.appendChild(damageType);
+  //Showing Damage Type
+  const damageType = document.createElement("h2");
+  damageType.innerText = `Damage Type: \n${data.damage.damage_type.name}`
+  divRightPage.appendChild(damageType);
 
-  // //Showing Damage per Spell Slot
-  // const damage = document.createElement("h2");
-  // damage.innerText = `Damage: \n${data.damage.damage_at_slot_level}`;
-  // divRightPage.appendChild(damage)
+  //Showing Damage per Spell Slot
+  const damage = document.createElement("h2");
+  damage.innerText = `Damage: \n${data.damage.damage_at_slot_level}`;
+  divRightPage.appendChild(damage)
 
   const description = document.createElement("p");
   description.innerText = `${data.desc}`;
@@ -69,10 +73,10 @@ function handleInput(event) {
   let inputValue = blankSpace.value;
   blankSpace.value = "";
   fetchData(inputValue);
-  // removeSpell()
+  removeSpell()
 }
 
-// function removeSpell() {
-//   divRightPage.innerHTML = "";
-//   divLeftPage.innerHTML = "";
-// }
+function removeSpell() {
+  divRightPage.innerHTML = "";
+  divLeftPage.innerHTML = "";
+}
