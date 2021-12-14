@@ -32,6 +32,9 @@ h1 {
   text-align: center;
 }
 
+p {
+  font-family: cursive;
+}
 
 img {
   width: fit-content;

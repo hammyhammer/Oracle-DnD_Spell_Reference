@@ -12,6 +12,7 @@ async function fetchData(spell) {
   showSpellData(spellData)
 }
 
+
 // fetchData();
 
 //Showing the Spell information
@@ -24,45 +25,72 @@ function showSpellData(data) {
   castingTime.innerText = `Casting Time: \n${data.casting_time}`;
   divLeftPage.appendChild(castingTime);
 
-  //Showing Range
-  const range = document.createElement("p");
+  const range = document.createElement("p");   //Showing Range
   range.innerText = `Range: \n${data.range}`;
   divLeftPage.appendChild(range);
 
-  //Showing Duration
-  const duration = document.createElement("p");
+  const duration = document.createElement("p");   //Showing Duration
   duration.innerText = `Duration: \n${data.duration}`
   divLeftPage.appendChild(duration);
 
-  //Showing Concentration
-  const concentration = document.createElement("p");
+  const concentration = document.createElement("p");   //Showing Concentration
   concentration.innerText = `Concentration:\n${data.concentration}`;
   divLeftPage.appendChild(concentration);
 
-  // Showing Description of Spell
-  const description = document.createElement("p");
+  const description = document.createElement("p");   // Showing Description of Spell
   description.innerText = `${data.desc}`;
   divRightPage.appendChild(description);
+
+  const damageInfo = document.createElement("h5");
+  damageInfo.innerText = `${data.higher_level}`
+  divRightPage.appendChild(damageInfo);
+
+  const damageType = document.createElement("h2");   //Showing Damage Type
+  damageType.innerText = `Damage Type: \n${data.damage.damage_type.name}`
+  divRightPage.appendChild(damageType);
+
+  // const damage = document.createElement("h2");   //Showing Damage per Spell Slot
+  // damage.innerText = `Damage: \n${data.damage.damage_at_slot_level[3]}
+  // \n${data.damage.damage_at_slot_level[4]}`;
+  // divRightPage.appendChild(damage)
 }
 
-function spellDamageOrHealing(data) {
-  const spellData = response.data;
-  if (spellData.includes(heal_at_slot_level)) {
-    const healData = document.createElement("p");
-    healData = data.heal_at_slot_level[1];
-    divRightPage.appendChild(healData)
-  }
-  else if (spellData.includes(damage_at_slot_level)) {
-    const damage = document.createElement("h2");   //Showing Damage per Spell Slot
-    damage.innerText = `Damage: \n${data.damage.damage_at_slot_level}`;
-    divRightPage.appendChild(damage)
 
-    const damageType = document.createElement("h2");   //Showing Damage Type
-    damageType.innerText = `Damage Type: \n${data.damage.damage_type.name}`
-    divRightPage.appendChild(damageType);
+// const damage = document.createElement("h2");   //Showing Damage per Spell Slot
+// for (data in data.damage_at_slot_level) {
+//   if (data.damage_at_slot_level === true) {
+//     damage.innerText = `Damage: \n${data.damage.damage_at_slot_level}
+//   \n${data.damage.damage_at_slot_level[1]}`;
+//     divRightPage.appendChild(damage)
+//   }
+//   else if (data.heal_at_slot_level === true) {
+//     const healData = document.createElement("p");
+//     healData = data.heal_at_slot_level[1];
+//     divRightPage.appendChild(healData)
+//   }
 
-  }
-}
+// }
+
+
+
+
+//Showing if Spell Heals or does Damage
+// function spellDamageOrHealing(spellData) {
+// const spellData = response.data;
+
+// else if (spellData.includes(damage_at_slot_level === true)) {
+// const damage = document.createElement("h2");   //Showing Damage per Spell Slot
+// damage.innerText = `Damage: \n${data.damage.damage_at_slot_level[3]}
+// \n${data.damage.damage_at_slot_level[4]}`;
+// divRightPage.appendChild(damage)
+
+//     const damageType = document.createElement("h2");   //Showing Damage Type
+//     damageType.innerText = `Damage Type: \n${data.damage.damage_type.name}`
+//     divRightPage.appendChild(damageType);
+
+//   }
+//   fetchData();
+// }
 
 
 
@@ -71,9 +99,9 @@ function spellDamageOrHealing(data) {
 
 
 //Showing Saving Throw Info
-const savingThrow = document.createElement("p")
-savingThrow.innerText = `Saving Throw:\n${data.dc.dc_type.name}`
-divLeftPage.appendChild(savingThrow);
+// const savingThrow = document.createElement("p")
+// savingThrow.innerText = `Saving Throw:\n${data.dc.dc_type.name}`
+// divLeftPage.appendChild(savingThrow);
 // else {
 //   const savingThrow = document.createElement("p");
 //   savingThrow.innerText = "There is no Saving Throw";
