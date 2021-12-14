@@ -10,8 +10,9 @@ async function fetchData(spell) {
   const spellData = response.data;
 
   console.log(spellData)
-  Object.keys(showSpellData).forEach(function (spellObj) {
-    showSpellData(spellObj)
+  Object.keys(showSpellData).forEach(function (data) {
+    console.log(data.name)
+    // showSpellData(spellObj)
   });
   // const gettingSpellData = response.data.data.results
   // fetchData("fireball");
