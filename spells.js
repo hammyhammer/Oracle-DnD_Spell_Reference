@@ -8,20 +8,21 @@ async function fetchData(spell) {
   const response = await axios.get(url);
   // console.log(response);
   const spellData = response.data;
-  console.log(spellData)
-  spellData.forEach(spellObj => {
-    showSpellData(spellObj);
-  })
-}
-// const gettingSpellData = response.data.data.results
-// fetchData();
-console.log
 
+  console.log(spellData)
+  Object.keys(showSpellData).forEach(function (spellObj) {
+    showSpellData(spellObj)
+  });
+  // const gettingSpellData = response.data.data.results
+  // fetchData("fireball");
+}
+
+fetchData("fireball");
 
 //Showing the Spell information
 //Showing the name of spell
 function showSpellData(data) {
-  const spellName = document.createElement("p");
+  const spellName = document.createElement("h4");
   spellName.innerText = `${data.name}`;
   divLeftPage.appendChild(spellName);
 

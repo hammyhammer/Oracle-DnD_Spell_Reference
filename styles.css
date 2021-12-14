@@ -9,3 +9,17 @@ h1 {
   justify-content: center;
   align-items: center;
 }
+
+.left-page {
+  border: 4px solid black;
+  height: 200px;
+}
+
+.right-page {
+  border: 4px solid pink;
+  height: 200px;
+}
+
+img {
+  width: fit-content;
+}
