@@ -17,44 +17,48 @@ async function fetchData(spell) {
 //Showing the Spell information
 //Showing the name of spell
 function showSpellData(data) {
-  const spellName = document.createElement("p");
+  const spellName = document.createElement("h3");
   spellName.innerText = `${data.name}`;
   divLeftPage.appendChild(spellName);
 
   //Showing Casting time
-  const castingTime = document.createElement("h2");
-  castingTime.innerText = `Casting Time: ${data.casting_time}`;
+  const castingTime = document.createElement("p");
+  castingTime.innerText = `Casting Time: \n${data.casting_time}`;
   divLeftPage.appendChild(castingTime);
 
   //Showing Range
-  const range = document.createElement("h2");
-  range.innerText = `Range:${data.range}`;
+  const range = document.createElement("p");
+  range.innerText = `Range: \n${data.range}`;
   divLeftPage.appendChild(range);
 
   //Showing Duration
-  const duration = document.createElement("h2");
-  duration.innerText = `Duration:${data.duration}`
+  const duration = document.createElement("p");
+  duration.innerText = `Duration: \n${data.duration}`
   divLeftPage.appendChild(duration);
 
   //Showing Concentration
-  const concentration = document.createElement("h2");
-  concentration.innerText = `Concentration:${data.concentration}`;
+  const concentration = document.createElement("p");
+  concentration.innerText = `Concentration:\n${data.concentration}`;
   divLeftPage.appendChild(concentration);
 
   //Showing Saving Throw Info
-  const savingThrow = document.createElement("h2")
-  savingThrow.innerText = `Saving Throw: ${data.dc.dc_type.name}`
+  const savingThrow = document.createElement("p")
+  savingThrow.innerText = `Saving Throw:\n${data.dc.dc_type.name}`
   divLeftPage.appendChild(savingThrow);
 
-  //Showing Damage Type
-  const damageType = document.createElement("h2");
-  damage.innerText = `Damage Type:${data.damage.damage_type}`
-  divRightPage.appendChild(damageType);
+  // //Showing Damage Type
+  // const damageType = document.createElement("h2");
+  // damageType.innerText = `Damage Type: \n${data.damage.damage_type.name}`
+  // divRightPage.appendChild(damageType);
 
-  //Showing Damage per Spell Slot
-  const damage = document.createElement("h2");
-  damage.innerText = `Damage: ${data.damage.damage_at_slot_level}`;
-  divRightPage.appendChild(damage)
+  // //Showing Damage per Spell Slot
+  // const damage = document.createElement("h2");
+  // damage.innerText = `Damage: \n${data.damage.damage_at_slot_level}`;
+  // divRightPage.appendChild(damage)
+
+  const description = document.createElement("p");
+  description.innerText = `${data.desc}`;
+  divRightPage.appendChild(description);
 }
 
 // Search functionality
