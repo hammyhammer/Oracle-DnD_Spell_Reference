@@ -181,7 +181,7 @@ Time frames are also key in the development cycle.  You have limited time to cod
 |Creating a remove function|H|3hrs|
 |Positioning data properly|H|3hrs|
 |Creating a reset button|H|2.5hrs
-|Creating searching functionality|H|3hrs
+|Creating searching functionality|H|3hrs|2hrs|
 |Styling CSS|H|3.5hrs|
 |Add media query|H|3hrs|
 |Fetching and utilizing API data|H|3hrs|

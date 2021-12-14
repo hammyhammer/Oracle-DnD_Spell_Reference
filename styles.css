@@ -35,3 +35,8 @@ h1 {
 img {
   width: fit-content;
 }
+
+footer {
+  border: 4px solid gray;
+  background: lightgray;
+}

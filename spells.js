@@ -10,13 +10,25 @@ async function fetchData(spell) {
   const spellData = response.data;
 
   console.log(spellData)
-  Object.keys(showSpellData).forEach(function (spellObj) {
-    // console.log(data.name)
-    showSpellData(spellObj)
-    // console.log(spellData)
-  });
+  Array.prototype.forEach.call(showSpellData, spellObj => {
+    showSpellData(spellObj);
+  })
+
+  // Object.values(showSpellData).forEach(function (spellObj) {
+  //   // console.log(data.name)
+  //   showSpellData(spellObj)
+  //   console.log(spellData)
+  // });
+
+  // spellData.forEach(spellObj => {
+  //   showSpellData(spellObj)
+  // })
+
+
+
   // const gettingSpellData = response.data.data.results
   // fetchData("fireball");
+
 }
 
 // fetchData();
@@ -24,7 +36,7 @@ async function fetchData(spell) {
 //Showing the Spell information
 //Showing the name of spell
 function showSpellData(data) {
-  const spellName = document.createElement("h2");
+  const spellName = document.createElement("p");
   spellName.innerText = `${data.name}`;
   divLeftPage.appendChild(spellName);
 
@@ -71,7 +83,7 @@ function handleInput(event) {
   event.preventDefault();
   let inputValue = blankSpace.value;
   blankSpace.value = "";
-  fetchData(inputValue)
+  fetchData(inputValue);
   // removeSpell()
 }
 
