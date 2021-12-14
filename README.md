@@ -184,7 +184,7 @@ Time frames are also key in the development cycle.  You have limited time to cod
 |Creating searching functionality|H|3hrs|2hrs|
 |Styling CSS|H|3.5hrs|
 |Add media query|H|3hrs|
-|Fetching and utilizing API data|H|3hrs|
+|Fetching and utilizing API data|H|3hrs|4hrs|
 |Creating a header| H| 2hrs|
 |Creating a footer|H| 2hrs|
 | Working with API | H | 3hrs| 

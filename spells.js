@@ -9,26 +9,7 @@ async function fetchData(spell) {
   console.log(response);
   const spellData = response.data;
 
-  console.log(spellData)
-  Array.prototype.forEach.call(showSpellData, spellObj => {
-    showSpellData(spellObj);
-  })
-
-  // Object.values(showSpellData).forEach(function (spellObj) {
-  //   // console.log(data.name)
-  //   showSpellData(spellObj)
-  //   console.log(spellData)
-  // });
-
-  // spellData.forEach(spellObj => {
-  //   showSpellData(spellObj)
-  // })
-
-
-
-  // const gettingSpellData = response.data.data.results
-  // fetchData("fireball");
-
+  showSpellData(spellData)
 }
 
 // fetchData();
