@@ -17,7 +17,7 @@ async function fetchData(spell) {
   // fetchData("fireball");
 }
 
-fetchData("fireball");
+// fetchData();
 
 //Showing the Spell information
 //Showing the name of spell
@@ -67,7 +67,7 @@ searchButton.addEventListener("click", handleInput);
 
 function handleInput(event) {
   event.preventDefault();
-  let inputValue = blankSpace.ariaValueMax;
+  let inputValue = blankSpace.value;
   blankSpace.value = "";
   fetchData(inputValue)
   // removeSpell()
