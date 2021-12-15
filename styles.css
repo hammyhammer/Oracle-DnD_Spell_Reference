@@ -84,7 +84,12 @@ input {
   display: none;
 }
 
+h3 {
+  text-align: left;
+}
+
 p {
+  text-align: center;
   font-family: cursive;
   /* font-size: 5%; */
 }
