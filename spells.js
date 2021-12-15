@@ -1,5 +1,5 @@
-const divLeftPage = document.querySelector("#left-page");
-const divRightPage = document.querySelector("#right-page");
+const divLeftPage = document.querySelector(".left-page");
+const divRightPage = document.querySelector(".right-page");
 const searchButton = document.querySelector("#search-button");
 const blankSpace = document.querySelector("#blank-space");
 
