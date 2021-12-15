@@ -4,12 +4,19 @@ const searchButton = document.querySelector("#search-button");
 const blankSpace = document.querySelector("#blank-space");
 
 async function fetchData(spell) {
-  const url = `https://www.dnd5eapi.co/api/spells/${spell}`;
-  const response = await axios.get(url);
-  console.log(response);
-  const spellData = response.data;
+  try {
+    const url = `https://www.dnd5eapi.co/api/spells/${spell}`;
+    const response = await axios.get(url);
+    console.log(response);
+    const spellData = response.data;
 
-  showSpellData(spellData)
+    showSpellData(spellData)
+
+  } catch (error) {
+    console.log("Error: Data not available.");
+  } finally {
+    console.log("Done.");
+  }
 }
 
 
@@ -17,8 +24,8 @@ async function fetchData(spell) {
 
 //Showing the Spell information
 function showSpellData(data) {
-  const spellName = document.createElement("h2"); //Showing the name of spell
-  spellName.innerText = `${data.name}`;
+  const spellName = document.createElement("h3"); //Showing the name of spell
+  spellName.innerText = `${data.name}: ${data.school.name} Level ${data.level} Spell`;
   divLeftPage.appendChild(spellName);
 
   const castingTime = document.createElement("p");   //Showing Casting time
@@ -45,9 +52,14 @@ function showSpellData(data) {
   damageInfo.innerText = `${data.higher_level}`
   divRightPage.appendChild(damageInfo);
 
+
   const damageType = document.createElement("h2");   //Showing Damage Type
   damageType.innerText = `Damage Type: \n${data.damage.damage_type.name}`
   divRightPage.appendChild(damageType);
+
+  const healData = document.createElement("p");
+  healData.innerText = `Healing: ${data.heal_at_slot_level[1]}`;
+  divRightPage.appendChild(healData)
 
   // const damage = document.createElement("h2");   //Showing Damage per Spell Slot
   // damage.innerText = `Damage: \n${data.damage.damage_at_slot_level[3]}
@@ -64,9 +76,7 @@ function showSpellData(data) {
 //     divRightPage.appendChild(damage)
 //   }
 //   else if (data.heal_at_slot_level === true) {
-//     const healData = document.createElement("p");
-//     healData = data.heal_at_slot_level[1];
-//     divRightPage.appendChild(healData)
+
 //   }
 
 // }
