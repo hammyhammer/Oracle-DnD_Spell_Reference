@@ -12,6 +12,7 @@ async function fetchData(spell) {
 
     showSpellData(spellData)
 
+
   } catch (error) {
     console.log("Error: Data not available.");
   } finally {
@@ -44,28 +45,44 @@ function showSpellData(data) {
   concentration.innerText = `Concentration:\n${data.concentration}`;
   divLeftPage.appendChild(concentration);
 
+
   const description = document.createElement("p");   // Showing Description of Spell
   description.innerText = `${data.desc}`;
   divRightPage.appendChild(description);
 
-  const damageInfo = document.createElement("h5");
+  const damageInfo = document.createElement("h5"); //Shows conditions casting at a higher level
   damageInfo.innerText = `${data.higher_level}`
   divRightPage.appendChild(damageInfo);
 
+  let hasDamage = "damage" in data;
+  if (hasDamage === true) {
+    const damageType = document.createElement("h2");   //Showing Damage Type
+    damageType.innerText = `Damage Type: \n${data.damage.damage_type.name}`
+    divRightPage.appendChild(damageType);
+  }
+  else if (hasDamage === false) {
+    const healData = document.createElement("p");
+    healData.innerText = `Healing: ${data.heal_at_slot_level[2]}`;
+    divRightPage.appendChild(healData)
+  }
+  // else {
+  //   const noData = document.createElement("p");
+  //   healData.innerText = `Healing: ${data.heal_at_slot_level[1]}`;
+  //   divRightPage.appendChild(healData)
+  // }
+  console.log(hasDamage)
 
-  const damageType = document.createElement("h2");   //Showing Damage Type
-  damageType.innerText = `Damage Type: \n${data.damage.damage_type.name}`
-  divRightPage.appendChild(damageType);
 
-  const healData = document.createElement("p");
-  healData.innerText = `Healing: ${data.heal_at_slot_level[1]}`;
-  divRightPage.appendChild(healData)
+
 
   // const damage = document.createElement("h2");   //Showing Damage per Spell Slot
   // damage.innerText = `Damage: \n${data.damage.damage_at_slot_level[3]}
   // \n${data.damage.damage_at_slot_level[4]}`;
   // divRightPage.appendChild(damage)
 }
+
+
+
 
 
 // const damage = document.createElement("h2");   //Showing Damage per Spell Slot
