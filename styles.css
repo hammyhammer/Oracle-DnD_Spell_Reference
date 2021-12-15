@@ -39,7 +39,8 @@ h1 {
   left: 32%;
   width: 25%;
   height: 70%;
-  font-size: %;
+  font-size: 16px;
+  font-size: 1vw;
 }
 
 .right-page {
@@ -50,7 +51,8 @@ h1 {
   right: 12%;
   width: 25%;
   height: 70%;
-  font-size: 90%;
+  font-size: 16px;
+  font-size: 1vw;
 }
 
 p {
