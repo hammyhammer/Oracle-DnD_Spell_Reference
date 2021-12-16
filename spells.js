@@ -82,7 +82,7 @@ function showSpellData(data) {
     divLeftPage.appendChild(savingThrow);
   }
 
-  else if (hasDamage === true && hasDC === false && level !== 0) {
+  else if (hasDamage === true && hasDC === false && higherLevel === true) {
     const damageType = document.createElement("p");   //Showing Damage Type
     damageType.innerText = `Damage Type: \n${data.damage.damage_type.name}`
     divRightPage.appendChild(damageType);
@@ -100,6 +100,19 @@ function showSpellData(data) {
     damageInfo.innerText = `${data.higher_level}`
     divRightPage.appendChild(damageInfo);
 
+    const savingThrow = document.createElement("p") //Showing Saving Throw Info
+    savingThrow.innerText = "Saving Throw:\nThere is no Saving Throw"
+    divLeftPage.appendChild(savingThrow);
+  }
+
+  else if (hasDamage === true && hasDC === false && higherLevel === false) {
+    const damageType = document.createElement("p");   //Showing Damage Type
+    damageType.innerText = `Damage Type: \n${data.damage.damage_type.name}`
+    divRightPage.appendChild(damageType);
+
+    const description = document.createElement("p");   // Showing Description of Spell
+    description.innerText = `${data.desc}`;
+    divRightPage.appendChild(description);
 
     const savingThrow = document.createElement("p") //Showing Saving Throw Info
     savingThrow.innerText = "Saving Throw:\nThere is no Saving Throw"
