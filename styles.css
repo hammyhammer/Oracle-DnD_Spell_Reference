@@ -20,11 +20,12 @@ input {
   font-family: cursive;
 }
 #search-button {
-  width: 25%;
-  height: 125%;
+  width: 30%;
+  height: 140%;
   font-size: 10px;
-  font-size: 1.5vw;
+  font-size: 2vw;
   font-family: cursive;
+  border: 4px solid black;
 }
 
 #above-book {
@@ -91,7 +92,7 @@ p {
 } */
 
 footer {
-  border: 4px solid gray;
+  border: 4px solid black;
   background: lightgray;
   width: auto;
   text-align: right;
@@ -162,6 +163,14 @@ footer {
     height: 120%;
     font-size: 10px;
     font-size: 1.75vw;
+    border: 2px solid black;
+    border-radius: 2px;
+
+  }
+
+  #blank-space {
+    border: 2px solid black;
+    border-radius: 2px;
   }
 
   #above-book {

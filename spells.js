@@ -7,14 +7,15 @@ async function fetchData(spell) {
   try {
     const url = `https://www.dnd5eapi.co/api/spells/${spell}`;
     const response = await axios.get(url);
-    console.log(response);
     const spellData = response.data;
 
     showSpellData(spellData)
     damageSpells(spellData)
-
+    // myStorage = window.localStorage
   } catch (error) {
-    console.log(error);
+    const howTo = document.createElement("p");
+    howTo.innerText = "Enter your spell in all lowercase.\nAlso if the spell has two words, separate them with a hyphen(-).\nE.g. misty-step"
+    divLeftPage.appendChild(howTo);
   } finally {
     console.log("Done.");
   }
@@ -57,7 +58,7 @@ function showSpellData(data) {
     divRightPage.appendChild(damageType);
 
     const description = document.createElement("p");   // Showing Description of Spell
-    description.innerText = `${data.desc}`;
+    description.innerText = `Description:\n${data.desc}`;
     divRightPage.appendChild(description);
   }
 
@@ -76,14 +77,14 @@ function showSpellData(data) {
     divRightPage.appendChild(damageInfo);
 
     const description = document.createElement("p");   // Showing Description of Spell
-    description.innerText = `${data.desc}`;
+    description.innerText = `Description:\n${data.desc}`;
     divRightPage.appendChild(description);
   }
 
   // UTILITY SPELLS
   else if (hasDamage === false && hasHealing === false && hasDC === false && higherLevel === true) {
     const description = document.createElement("p");   // Showing Description of Spell
-    description.innerText = `${data.desc}`;
+    description.innerText = `Description:\n${data.desc}`;
     divRightPage.appendChild(description);
 
     const damageInfo = document.createElement("p"); //Shows conditions casting at a higher level
@@ -98,7 +99,7 @@ function showSpellData(data) {
 
   else if (hasDamage === false && hasHealing === false && hasDC === true && higherLevel == true) {
     const description = document.createElement("p");   // Showing Description of Spell
-    description.innerText = `${data.desc}`;
+    description.innerText = `Description:\n${data.desc}`;
     divRightPage.appendChild(description);
 
     const damageInfo = document.createElement("p"); //Shows conditions casting at a higher level
@@ -113,7 +114,7 @@ function showSpellData(data) {
 
   else if (hasDamage === false && hasHealing === false && hasDC === true && higherLevel == false) {
     const description = document.createElement("p");   // Showing Description of Spell
-    description.innerText = `${data.desc}`;
+    description.innerText = `Description:\n${data.desc}`;
     divRightPage.appendChild(description);
 
     const savingThrow = document.createElement("p") //Showing Saving Throw Info
@@ -123,7 +124,7 @@ function showSpellData(data) {
 
   else if (hasDamage === false && hasHealing === false && hasDC === false && higherLevel === false) {
     const description = document.createElement("p");   // Showing Description of Spell
-    description.innerText = `${data.desc}`;
+    description.innerText = `Description:\n${data.desc}`;
     divRightPage.appendChild(description);
 
     const savingThrow = document.createElement("p") //Showing Saving Throw Info
@@ -145,7 +146,6 @@ function damageSpells(data) {
     damageType.innerText = `Damage Type: \n${data.damage.damage_type.name}`
     divRightPage.appendChild(damageType);
 
-    console.log(damageLevelSlots);
     for (const key in damageLevelSlots) { //Showing Damage per Spell Slot
       const damageSlots = document.createElement("p");
       damageSlots.innerText = `Level ${key}: ${damageLevelSlots[key]}`
@@ -153,7 +153,7 @@ function damageSpells(data) {
     };
 
     const description = document.createElement("p");   // Showing Description of Spell
-    description.innerText = `${data.desc}`;
+    description.innerText = `Description:\n${data.desc}`;
     divRightPage.appendChild(description);
 
     const damageInfo = document.createElement("p"); //Shows conditions casting at a higher level
@@ -171,7 +171,7 @@ function damageSpells(data) {
     divRightPage.appendChild(damageType);
 
     const description = document.createElement("p");   // Showing Description of Spell
-    description.innerText = `${data.desc}`;
+    description.innerText = `Description:\n${data.desc}`;
     divRightPage.appendChild(description);
 
     const damageInfo = document.createElement("p"); //Shows conditions casting at a higher level
@@ -190,7 +190,7 @@ function damageSpells(data) {
     divRightPage.appendChild(damageType);
 
     const description = document.createElement("p");   // Showing Description of Spell
-    description.innerText = `${data.desc}`;
+    description.innerText = `Description:\n${data.desc}`;
     divRightPage.appendChild(description);
 
     const damageInfo = document.createElement("p"); //Shows conditions casting at a higher level
@@ -208,7 +208,7 @@ function damageSpells(data) {
     divRightPage.appendChild(damageType);
 
     const description = document.createElement("p");   // Showing Description of Spell
-    description.innerText = `${data.desc}`;
+    description.innerText = `Description:\n${data.desc}`;
     divRightPage.appendChild(description);
 
     const savingThrow = document.createElement("p") //Showing Saving Throw Info
@@ -225,6 +225,7 @@ function handleInput(event) {
   let inputValue = blankSpace.value;
   blankSpace.value = "";
   fetchData(inputValue);
+  // localStorage.setItem(inputValue);
   removeSpell()
 }
 

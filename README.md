@@ -184,23 +184,37 @@ Time frames are also key in the development cycle.  You have limited time to cod
 |Creating searching functionality|H|3hrs|2hrs|
 |Styling CSS|H|3.5hrs|4hrs|
 |Add media query|H|3hrs|2.5hrs|
-|Fetching and utilizing API data|H|3hrs|5.5hrs|
+|Fetching and utilizing API data|H|3hrs|4hrs|
 |Creating a header| H| 2hrs|1.5hrs|
 |Creating a footer|H| 2hrs|1.5hrs|
-| Working with API | H | 3hrs| 
-|Adding local storage|M| 4hrs|
+|Creating functionality for damage|H|3hrs|4hrs|
+|Creating functionality for healing|H|3hrs|4hrs|
+|Creating functionality for utility|H|3hrs|2hrs|
+|Adding local storage|L| 3hrs|
 | Total | NA| 37hrs| NA | NA |
 
 
 ## Code Snippet
 
-<!-- Use this section to include a brief code snippet of functionality that you are proud of and a brief description.  
+ let hasDamage = "damage" in data;
+  let hasDC = "dc" in data;
+  let higherLevel = "higher_level" in data;
 
-```
-function reverse(string) {
-	// here is the code to reverse a string of text
-}
-``` -->
+  if (hasDamage === true && hasDC === true) {
+    let damageLevelSlots = data.damage.damage_at_slot_level;
+
+    const damageType = document.createElement("p");   //Showing Damage Type
+    damageType.innerText = `Damage Type: \n${data.damage.damage_type.name}`
+    divRightPage.appendChild(damageType);
+
+    for (const key in damageLevelSlots) { //Showing Damage per Spell Slot
+      const damageSlots = document.createElement("p");
+      damageSlots.innerText = `Level ${key}: ${damageLevelSlots[key]}`
+      divRightPage.appendChild(damageSlots);
+    };
+
+Above I was about to individually select and display the varying spell slot levels for a spell. 
 
 ## Change Log
- <!-- Use this section to document what changes were made and the reasoning behind those changes.   -->
+Originally I was planning on just doing damage related spells. But thought I ought to add healing and utility spells to make my app more versatile.
+I added the healing, utility and damage spells to my timeframe 
