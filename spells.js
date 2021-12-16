@@ -53,20 +53,26 @@ function showSpellData(data) {
   let level = "level" in data;
   let hasHealing = "heal_at_slot_level" in data;
   let higherLevel = "higher_level" in data
-
+  let damageLevelSlots = data.damage.damage_at_slot_level;
   // DAMAGE DEALING SPELLS
   if (hasDamage === true && hasDC === true) {
     const damageType = document.createElement("p");   //Showing Damage Type
     damageType.innerText = `Damage Type: \n${data.damage.damage_type.name}`
     divRightPage.appendChild(damageType);
     ///////////////
-    let damageSlots = document.createElement("p");
-    damageSlots = (data.damage.damage_at_slot_level)
-    console.log(damageSlots);
-    for (const key in damageSlots) {
-      damageSlots.innerText = `${key}: ${damageSlots[key]}`
+
+
+    // const damageSlots = document.createElement("p");
+    // damageSlots = (data.damage.damage_at_slot_level)
+    console.log(damageLevelSlots);
+    for (const key in damageLevelSlots) {
+      const damageSlots = document.createElement("p");
+      damageSlots.innerText = `${key}: ${damageLevelSlots[key]}`
       divRightPage.appendChild(damageSlots);
     };
+
+
+
     // divRightPage.appendChild(damageSlots);
     // damageSlots.forEach((damageSlot, index) => {
     //   damageSlots.innerText = `${damageSlot}: ${damageSlots[damageSlot]}`;
