@@ -49,10 +49,6 @@ function showSpellData(data) {
   // description.innerText = `${data.desc}`;
   // divRightPage.appendChild(description);
 
-  // const damageInfo = document.createElement("p"); //Shows conditions casting at a higher level
-  // damageInfo.innerText = `${data.higher_level}`
-  // divRightPage.appendChild(damageInfo);
-
 
   // let damageArray = data.damage.damage_at_slot_level
   let hasDamage = "damage" in data;
@@ -74,6 +70,10 @@ function showSpellData(data) {
     description.innerText = `${data.desc}`;
     divRightPage.appendChild(description);
 
+    const damageInfo = document.createElement("p"); //Shows conditions casting at a higher level
+    damageInfo.innerText = `${data.higher_level}`
+    divRightPage.appendChild(damageInfo);
+
     // damage.innerText = `Damage: \n${damageArray.forEach(damage => divRightPage.appendChild(damage))}`
 
     const savingThrow = document.createElement("p") //Showing Saving Throw Info
@@ -81,7 +81,7 @@ function showSpellData(data) {
     divLeftPage.appendChild(savingThrow);
   }
 
-  else if (hasDamage === true && hasDC === false && level > 0) {
+  else if (hasDamage === true && hasDC === false && level !== 0) {
     const damageType = document.createElement("p");   //Showing Damage Type
     damageType.innerText = `Damage Type: \n${data.damage.damage_type.name}`
     divRightPage.appendChild(damageType);
@@ -94,6 +94,10 @@ function showSpellData(data) {
     const description = document.createElement("p");   // Showing Description of Spell
     description.innerText = `${data.desc}`;
     divRightPage.appendChild(description);
+
+    const damageInfo = document.createElement("p"); //Shows conditions casting at a higher level
+    damageInfo.innerText = `${data.higher_level}`
+    divRightPage.appendChild(damageInfo);
 
 
     const savingThrow = document.createElement("p") //Showing Saving Throw Info
@@ -117,6 +121,8 @@ function showSpellData(data) {
   //   divLeftPage.appendChild(savingThrow);
   // }
 
+
+  // CANTRIPS
   else if (hasDamage === true && level === 0) {
     const damageType = document.createElement("p");   //Showing Damage Type
     damageType.innerText = `Damage Type: \n${data.damage.damage_type.name}`
@@ -127,24 +133,41 @@ function showSpellData(data) {
     divRightPage.appendChild(description);
   }
 
+  // HEALING SPELLS
   else if (hasDamage === false && hasHealing === true) {
     const healData = document.createElement("p");
     healData.innerText = `Healing: ${data.heal_at_slot_level[2]}`;
     divRightPage.appendChild(healData)
 
+    const damageInfo = document.createElement("p"); //Shows conditions casting at a higher level
+    damageInfo.innerText = `${data.higher_level}`
+    divRightPage.appendChild(damageInfo);
+
     const description = document.createElement("p");   // Showing Description of Spell
     description.innerText = `${data.desc}`;
     divRightPage.appendChild(description);
   }
+
+  // UTILITY SPELLS
   else if (hasDamage === false && hasHealing === false) {
     const description = document.createElement("p");   // Showing Description of Spell
     description.innerText = `${data.desc}`;
     divRightPage.appendChild(description);
 
-    const noData = document.createElement("p");
-    noData.innerText = ``;
-    divRightPage.appendChild(noData)
+    const damageInfo = document.createElement("p"); //Shows conditions casting at a higher level
+    damageInfo.innerText = `${data.higher_level}`
+    divRightPage.appendChild(damageInfo);
 
+  }
+
+  else if (hasDamage === false && hasHealing === false) {
+    const description = document.createElement("p");   // Showing Description of Spell
+    description.innerText = `${data.desc}`;
+    divRightPage.appendChild(description);
+
+    const damageInfo = document.createElement("p"); //Shows conditions casting at a higher level
+    damageInfo.innerText = `${data.higher_level}`
+    divRightPage.appendChild(damageInfo);
 
   }
 
