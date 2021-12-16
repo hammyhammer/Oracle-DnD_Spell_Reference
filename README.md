@@ -183,8 +183,8 @@ Time frames are also key in the development cycle.  You have limited time to cod
 |Creating a reset button|H|2.5hrs|1.5
 |Creating searching functionality|H|3hrs|2hrs|
 |Styling CSS|H|3.5hrs|4hrs|
-|Add media query|H|3hrs|2hrs|
-|Fetching and utilizing API data|H|3hrs|4hrs|
+|Add media query|H|3hrs|2.5hrs|
+|Fetching and utilizing API data|H|3hrs|5.5hrs|
 |Creating a header| H| 2hrs|1.5hrs|
 |Creating a footer|H| 2hrs|1.5hrs|
 | Working with API | H | 3hrs| 
