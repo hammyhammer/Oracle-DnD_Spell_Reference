@@ -50,7 +50,7 @@ function showSpellData(data) {
   description.innerText = `${data.desc}`;
   divRightPage.appendChild(description);
 
-  const damageInfo = document.createElement("h5"); //Shows conditions casting at a higher level
+  const damageInfo = document.createElement("p"); //Shows conditions casting at a higher level
   damageInfo.innerText = `${data.higher_level}`
   divRightPage.appendChild(damageInfo);
 
@@ -86,7 +86,7 @@ function showSpellData(data) {
 
 
     const savingThrow = document.createElement("p") //Showing Saving Throw Info
-    savingThrow.innerText = "There is no Saving Throw"
+    savingThrow.innerText = "Saving Throw:\nThere is no Saving Throw"
     divLeftPage.appendChild(savingThrow);
   }
 

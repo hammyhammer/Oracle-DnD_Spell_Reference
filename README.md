@@ -159,8 +159,8 @@ You are **responsible** for scheduling time with your squad to seek approval for
 |Dec 13| Project Approval | Complete
 |Dec 13| Core Application Structure (HTML, CSS, etc.) | Complete
 |Dec 14| Pseudocode / actual code | Complete
-|Dec 15| Initial Clickable Model  | Incomplete
-|Dec 16| MVP | Incomplete
+|Dec 15| Initial Clickable Model  | Complete
+|Dec 16| MVP | Complete
 |Dec 17| Presentations | Incomplete
 
 ## Priority Matrix
@@ -179,14 +179,14 @@ Time frames are also key in the development cycle.  You have limited time to cod
 |Setting API|M| 2.5hr|1.5hr|
 |User Input Functionality| H| 2hrs|4hrs|
 |Creating a remove function|H|3hrs|1.5hrs|
-|Positioning data properly|H|3hrs|
+|Positioning data properly|H|3hrs|4hrs|
 |Creating a reset button|H|2.5hrs|1.5
 |Creating searching functionality|H|3hrs|2hrs|
-|Styling CSS|H|3.5hrs|
-|Add media query|H|3hrs|
+|Styling CSS|H|3.5hrs|4hrs|
+|Add media query|H|3hrs|2hrs|
 |Fetching and utilizing API data|H|3hrs|4hrs|
-|Creating a header| H| 2hrs|
-|Creating a footer|H| 2hrs|
+|Creating a header| H| 2hrs|1.5hrs|
+|Creating a footer|H| 2hrs|1.5hrs|
 | Working with API | H | 3hrs| 
 |Adding local storage|M| 4hrs|
 | Total | NA| 37hrs| NA | NA |
