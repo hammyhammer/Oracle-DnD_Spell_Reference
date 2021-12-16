@@ -2,12 +2,18 @@
   display: none;
 }
 
+#browser-header {
+  display: flex;
+}
+
 h1 {
+  display: flex;
+  justify-content: flex-start;
   background-color: lightgray;
   border: 4px solid black;
-  text-align: left;
   margin: auto;
   font-family: cursive;
+  font-size: 3vw;
 }
 
 input {
