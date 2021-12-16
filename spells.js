@@ -55,6 +55,7 @@ function showSpellData(data) {
   let hasDC = "dc" in data;
   let level = "level" in data;
   let hasHealing = "heal_at_slot_level" in data;
+  let higherLevel = "higher_level" in data
 
   if (hasDamage === true && hasDC === true) {
     const damageType = document.createElement("p");   //Showing Damage Type
@@ -149,7 +150,7 @@ function showSpellData(data) {
   }
 
   // UTILITY SPELLS
-  else if (hasDamage === false && hasHealing === false) {
+  else if (hasDamage === false && hasHealing === false && hasDC === false && higherLevel === true) {
     const description = document.createElement("p");   // Showing Description of Spell
     description.innerText = `${data.desc}`;
     divRightPage.appendChild(description);
@@ -158,9 +159,13 @@ function showSpellData(data) {
     damageInfo.innerText = `${data.higher_level}`
     divRightPage.appendChild(damageInfo);
 
+    const savingThrow = document.createElement("p") //Showing Saving Throw Info
+    savingThrow.innerText = "Saving Throw:\nThere is no Saving Throw"
+    divLeftPage.appendChild(savingThrow);
+
   }
 
-  else if (hasDamage === false && hasHealing === false) {
+  else if (hasDamage === false && hasHealing === false && hasDC === true && higherLevel == true) {
     const description = document.createElement("p");   // Showing Description of Spell
     description.innerText = `${data.desc}`;
     divRightPage.appendChild(description);
@@ -169,31 +174,63 @@ function showSpellData(data) {
     damageInfo.innerText = `${data.higher_level}`
     divRightPage.appendChild(damageInfo);
 
+    const savingThrow = document.createElement("p") //Showing Saving Throw Info
+    savingThrow.innerText = `Saving Throw:\n${data.dc.dc_type.name}\nDC Saving throw is calculated by 8 + proficiency bonus + spellcasting ability modifer`
+    divLeftPage.appendChild(savingThrow);
+
   }
 
+  else if (hasDamage === false && hasHealing === false && hasDC === true && higherLevel == false) {
+    const description = document.createElement("p");   // Showing Description of Spell
+    description.innerText = `${data.desc}`;
+    divRightPage.appendChild(description);
+
+    // const damageInfo = document.createElement("p"); //Shows conditions casting at a higher level
+    // damageInfo.innerText = `${data.higher_level}`
+    // divRightPage.appendChild(damageInfo);
+
+    const savingThrow = document.createElement("p") //Showing Saving Throw Info
+    savingThrow.innerText = `Saving Throw:\n${data.dc.dc_type.name}\nDC Saving throw is calculated by 8 + proficiency bonus + spellcasting ability modifer`
+    divLeftPage.appendChild(savingThrow);
+
+
+
+  }
+
+  else if (hasDamage === false && hasHealing === false && hasDC === false && higherLevel === false) {
+    const description = document.createElement("p");   // Showing Description of Spell
+    description.innerText = `${data.desc}`;
+    divRightPage.appendChild(description);
+
+    // const damageInfo = document.createElement("p"); //Shows conditions casting at a higher level
+    // damageInfo.innerText = `${data.higher_level}`
+    // divRightPage.appendChild(damageInfo);
+
+    const savingThrow = document.createElement("p") //Showing Saving Throw Info
+    savingThrow.innerText = "Saving Throw:\nThere is no Saving Throw"
+    divLeftPage.appendChild(savingThrow);
+
+
+  }
+
+
+
+
+
+
+
+
+
+
+  // else {
+  //   const savingThrow = document.createElement("p");
+  //   savingThrow.innerText = "There is no Saving Throw";
+  //   divLeftPage.appendChild(savingThrow);
+  // };
 
 
 
 }
-
-
-
-
-
-
-
-
-
-
-// else {
-//   const savingThrow = document.createElement("p");
-//   savingThrow.innerText = "There is no Saving Throw";
-//   divLeftPage.appendChild(savingThrow);
-// };
-
-
-
-
 
 // Search functionality
 searchButton.addEventListener("click", handleInput);
