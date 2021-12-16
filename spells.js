@@ -23,7 +23,7 @@ async function fetchData(spell) {
 
 // fetchData();
 
-//Showing the Spell information
+//Showing the Spell information. Universal Information
 function showSpellData(data) {
   const spellName = document.createElement("h3"); //Showing the name of spell
   spellName.innerText = `${data.name}: ${data.school.name} Level ${data.level}`;
@@ -45,27 +45,39 @@ function showSpellData(data) {
   concentration.innerText = `Concentration:\n${data.concentration}`;
   divLeftPage.appendChild(concentration);
 
-  // const description = document.createElement("p");   // Showing Description of Spell
-  // description.innerText = `${data.desc}`;
-  // divRightPage.appendChild(description);
-
 
   // let damageArray = data.damage.damage_at_slot_level
   let hasDamage = "damage" in data;
+  // let damageSlots = "damage_at_slot_level"
   let hasDC = "dc" in data;
   let level = "level" in data;
   let hasHealing = "heal_at_slot_level" in data;
   let higherLevel = "higher_level" in data
 
+  // DAMAGE DEALING SPELLS
   if (hasDamage === true && hasDC === true) {
     const damageType = document.createElement("p");   //Showing Damage Type
     damageType.innerText = `Damage Type: \n${data.damage.damage_type.name}`
     divRightPage.appendChild(damageType);
+    ///////////////
+    let damageSlots = document.createElement("p");
+    damageSlots = (data.damage.damage_at_slot_level)
+    console.log(damageSlots);
+    for (const key in damageSlots) {
+      damageSlots.innerText = `${key}: ${damageSlots[key]}`
+      divRightPage.appendChild(damageSlots);
+    };
+    // divRightPage.appendChild(damageSlots);
+    // damageSlots.forEach((damageSlot, index) => {
+    //   damageSlots.innerText = `${damageSlot}: ${damageSlots[damageSlot]}`;
+    //   const damageSlots = document.createElement("p");
+    //   divRightPage.appendChild(damageSlots)
+    // });
 
-    const damage = document.createElement("p");   //Showing Damage per Spell Slot
-    damage.innerText = `Damage: \n${data.damage.damage_at_slot_level[3]}
-    \n${data.damage.damage_at_slot_level[4]}`;
-    divRightPage.appendChild(damage)
+    // const damage = document.createElement("p");   //Showing Damage per Spell Slot
+    // damage.innerText = `Damage: \n${data.damage.damage_at_slot_level[3]}
+    // \n${data.damage.damage_at_slot_level[4]}`;
+    // divRightPage.appendChild(damage)
 
     const description = document.createElement("p");   // Showing Description of Spell
     description.innerText = `${data.desc}`;
