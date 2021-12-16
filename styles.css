@@ -42,11 +42,9 @@ input {
 
 .book {
   position: relative;
-  /* text-align: center; */
   display: flex;
   flex-direction: row;
   height: 100%;
-  /* background-image: url('/Images/book.png'); */
 }
 
 .left-page {

@@ -198,10 +198,6 @@ function showSpellData(data) {
     description.innerText = `${data.desc}`;
     divRightPage.appendChild(description);
 
-    // const damageInfo = document.createElement("p"); //Shows conditions casting at a higher level
-    // damageInfo.innerText = `${data.higher_level}`
-    // divRightPage.appendChild(damageInfo);
-
     const savingThrow = document.createElement("p") //Showing Saving Throw Info
     savingThrow.innerText = `Saving Throw:\n${data.dc.dc_type.name}\nDC Saving throw is calculated by 8 + proficiency bonus + spellcasting ability modifer`
     divLeftPage.appendChild(savingThrow);
@@ -215,32 +211,12 @@ function showSpellData(data) {
     description.innerText = `${data.desc}`;
     divRightPage.appendChild(description);
 
-    // const damageInfo = document.createElement("p"); //Shows conditions casting at a higher level
-    // damageInfo.innerText = `${data.higher_level}`
-    // divRightPage.appendChild(damageInfo);
-
     const savingThrow = document.createElement("p") //Showing Saving Throw Info
     savingThrow.innerText = "Saving Throw:\nThere is no Saving Throw"
     divLeftPage.appendChild(savingThrow);
 
 
   }
-
-
-
-
-
-
-
-
-
-
-  // else {
-  //   const savingThrow = document.createElement("p");
-  //   savingThrow.innerText = "There is no Saving Throw";
-  //   divLeftPage.appendChild(savingThrow);
-  // };
-
 
 
 }
