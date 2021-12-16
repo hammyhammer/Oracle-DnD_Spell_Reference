@@ -75,9 +75,17 @@ function showSpellData(data) {
 
   // HEALING SPELLS
   else if (hasDamage === false && hasHealing === true) {
-    const healData = document.createElement("p");
-    healData.innerText = `Healing: ${data.heal_at_slot_level[2]}`;
-    divRightPage.appendChild(healData)
+    let healLevelSlots = data.heal_at_slot_level;
+
+    for (const key in healLevelSlots) { //Showing Damage per Spell Slot
+      const healData = document.createElement("p");
+      healData.innerText = `Level ${key}: ${healLevelSlots[key]}`
+      divRightPage.appendChild(healData);
+    };
+
+    // const healData = document.createElement("p");
+    // // healData.innerText = `Healing: ${data.heal_at_slot_level[2]}`;
+    // // divRightPage.appendChild(healData)
 
     const damageInfo = document.createElement("p"); //Shows conditions casting at a higher level
     damageInfo.innerText = `${data.higher_level}`
@@ -166,25 +174,11 @@ function damageSpells(data) {
     // const damageSlots = document.createElement("p");
     // damageSlots = (data.damage.damage_at_slot_level)
     console.log(damageLevelSlots);
-    for (const key in damageLevelSlots) {
+    for (const key in damageLevelSlots) { //Showing Damage per Spell Slot
       const damageSlots = document.createElement("p");
-      damageSlots.innerText = `${key}: ${damageLevelSlots[key]}`
+      damageSlots.innerText = `Level ${key}: ${damageLevelSlots[key]}`
       divRightPage.appendChild(damageSlots);
     };
-
-
-
-    // divRightPage.appendChild(damageSlots);
-    // damageSlots.forEach((damageSlot, index) => {
-    //   damageSlots.innerText = `${damageSlot}: ${damageSlots[damageSlot]}`;
-    //   const damageSlots = document.createElement("p");
-    //   divRightPage.appendChild(damageSlots)
-    // });
-
-    // const damage = document.createElement("p");   //Showing Damage per Spell Slot
-    // damage.innerText = `Damage: \n${data.damage.damage_at_slot_level[3]}
-    // \n${data.damage.damage_at_slot_level[4]}`;
-    // divRightPage.appendChild(damage)
 
     const description = document.createElement("p");   // Showing Description of Spell
     description.innerText = `${data.desc}`;
@@ -193,8 +187,6 @@ function damageSpells(data) {
     const damageInfo = document.createElement("p"); //Shows conditions casting at a higher level
     damageInfo.innerText = `${data.higher_level}`
     divRightPage.appendChild(damageInfo);
-
-    // damage.innerText = `Damage: \n${damageArray.forEach(damage => divRightPage.appendChild(damage))}`
 
     const savingThrow = document.createElement("p") //Showing Saving Throw Info
     savingThrow.innerText = `Saving Throw:\n${data.dc.dc_type.name}\nDC Saving throw is calculated by 8 + proficiency bonus + spellcasting ability modifer`
@@ -206,10 +198,24 @@ function damageSpells(data) {
     damageType.innerText = `Damage Type: \n${data.damage.damage_type.name}`
     divRightPage.appendChild(damageType);
 
-    //   const damage = document.createElement("p");   //Showing Damage per Spell Slot
-    //   damage.innerText = `Damage: \n${data.damage.damage_at_slot_level[3]}
-    // \n${data.damage.damage_at_slot_level[4]}`;
-    //   divRightPage.appendChild(damage)
+    const description = document.createElement("p");   // Showing Description of Spell
+    description.innerText = `${data.desc}`;
+    divRightPage.appendChild(description);
+
+    const damageInfo = document.createElement("p"); //Shows conditions casting at a higher level
+    damageInfo.innerText = `${data.higher_level}`
+    divRightPage.appendChild(damageInfo);
+
+    const savingThrow = document.createElement("p") //Showing Saving Throw Info
+    savingThrow.innerText = "Saving Throw:\nThere is no Saving Throw"
+    divLeftPage.appendChild(savingThrow);
+  }
+
+
+  else if (hasDamage === true && hasDC === false && higherLevel === true) {
+    const damageType = document.createElement("p");   //Showing Damage Type
+    damageType.innerText = `Damage Type: \n${data.damage.damage_type.name}`
+    divRightPage.appendChild(damageType);
 
     const description = document.createElement("p");   // Showing Description of Spell
     description.innerText = `${data.desc}`;
@@ -237,22 +243,6 @@ function damageSpells(data) {
     savingThrow.innerText = "Saving Throw:\nThere is no Saving Throw"
     divLeftPage.appendChild(savingThrow);
   }
-
-  // else if (hasDamage === true && hasDC === false) {
-  //   const damageType = document.createElement("h2");   //Showing Damage Type
-  //   damageType.innerText = `Damage Type: \n${data.damage.damage_type.name}`
-  //   divRightPage.appendChild(damageType);
-
-  //   const damage = document.createElement("h2");   //Showing Damage per Spell Slot
-  //   damage.innerText = `Damage: \n${data.damage.damage_at_slot_level[3]}
-  // \n${data.damage.damage_at_slot_level[4]}`;
-  //   divRightPage.appendChild(damage)
-
-
-  //   const savingThrow = document.createElement("p") //Showing Saving Throw Info
-  //   savingThrow.innerText = "There is no Saving Throw"
-  //   divLeftPage.appendChild(savingThrow);
-  // }
 }
 
 
