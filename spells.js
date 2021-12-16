@@ -149,12 +149,14 @@ function showSpellData(data) {
 
 
 function damageSpells(data) {
-  let damageLevelSlots = data.damage.damage_at_slot_level;
+  // let damageLevelSlots = data.damage.damage_at_slot_level;
   let hasDamage = "damage" in data;
   let hasDC = "dc" in data;
   let higherLevel = "higher_level" in data;
 
   if (hasDamage === true && hasDC === true) {
+    let damageLevelSlots = data.damage.damage_at_slot_level;
+
     const damageType = document.createElement("p");   //Showing Damage Type
     damageType.innerText = `Damage Type: \n${data.damage.damage_type.name}`
     divRightPage.appendChild(damageType);
