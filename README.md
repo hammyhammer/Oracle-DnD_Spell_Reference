@@ -214,7 +214,7 @@ Time frames are also key in the development cycle.  You have limited time to cod
       divRightPage.appendChild(damageSlots);
     };
 
-Above I was about to individually select and display the varying spell slot levels for a spell. 
+Above, I was able to individually select the varying spell slot levels that would tell the user what they would need to roll for a particular spell slot. 
 
 ## Change Log
 Originally I was planning on just doing damage related spells. But thought I ought to add healing and utility spells to make my app more versatile.
