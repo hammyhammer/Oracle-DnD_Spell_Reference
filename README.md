@@ -136,7 +136,7 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 - Find and use external api  
 - Allow user to type in a spell or cantrip. Press button to search
 - User recieves information regarding spell/cantrip
-- Render the data on the page that can be read and interrepted easily. 
+- Render the data on the page that can be read and interpreted easily. 
 - Allow a reset button to search different spells
 - Make it compatible on desktop and mobile.
 - Commit daily
