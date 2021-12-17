@@ -136,7 +136,7 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 - User recieves information regarding spell/cantrip
 - Render the data on the page that can be read and interrepted easily. 
 - Allow a reset button to search different spells
-- Make it compartible on desktop and mobile.
+- Make it compatible on desktop and mobile.
 - Commit daily
 
 #### PostMVP  
@@ -175,23 +175,24 @@ Time frames are also key in the development cycle.  You have limited time to cod
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-|HTML, CSS, JS setup|M| 0.5hr|0.5|
-|Setting API|M| 2.5hr|1.5hr|
-|User Input Functionality| H| 2hrs|4hrs|
-|Creating a remove function|H|3hrs|1.5hrs|
-|Positioning data properly|H|3hrs|4hrs|
-|Creating a reset button|H|2.5hrs|1.5
-|Creating searching functionality|H|3hrs|2hrs|
-|Styling CSS|H|3.5hrs|4hrs|
-|Add media query|H|3hrs|2.5hrs|
-|Fetching and utilizing API data|H|3hrs|4hrs|
-|Creating a header| H| 2hrs|1.5hrs|
-|Creating a footer|H| 2hrs|1.5hrs|
-|Creating functionality for damage|H|3hrs|4hrs|
-|Creating functionality for healing|H|3hrs|4hrs|
-|Creating functionality for utility|H|3hrs|2hrs|
-|Adding local storage|L| 3hrs|
-| Total | NA| 37hrs| NA | NA |
+|HTML, CSS, JS setup|M| 0.5hr|0.5hr|0.5hr|
+|Setting API|M| 2.5hrs|1.5hrs|1.5hrs
+|User Input Functionality| H| 2hrs|4hrs|4hrs|
+|Creating a remove function|H|3hrs|1.5hrs|1.5hrs|
+|Positioning data properly|H|3hrs|4hrs|4hrs|
+|Creating a reset button|H|2.5hrs|1.5|1.5hrs|
+|Creating searching functionality|H|3hrs|2hrs|2hrs|
+|Styling CSS|H|3.5hrs|4hrs|4hrs|
+|Add media query|H|3hrs|2.5hrs|2.5hrs|
+|Media query css|H|1.5|3.5hrs|3.5hrs|
+|Fetching and utilizing API data|H|3hrs|4hrs|4hrs|
+|Creating a header| H| 2hrs|1.5hrs|1.5hrs|
+|Creating a footer|H| 2hrs|1.5hrs|1.5hrs|
+|Creating functionality for damage|H|3hrs|4hrs|4hrs|
+|Creating functionality for healing|H|3hrs|4hrs|4hrs|
+|Creating functionality for utility|H|3hrs|2hrs|2hrs|
+|Adding local storage|L| 3hrs|NA|NA|
+| Total | NA| 43.5hrs| 42hrs | 42hrs |
 
 
 ## Code Snippet
