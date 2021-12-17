@@ -189,12 +189,12 @@ Time frames are also key in the development cycle.  You have limited time to cod
 |Media query css|H|1.5|3.5hrs|3.5hrs|
 |Fetching and utilizing API data|H|3hrs|4hrs|4hrs|
 |Creating a header| H| 2hrs|1.5hrs|1.5hrs|
-|Creating a footer|H| 2hrs|1.5hrs|1.5hrs|
+|Creating a footer|H| 2hrs|2hrs|2hrs|
 |Creating functionality for damage|H|3hrs|4hrs|4hrs|
 |Creating functionality for healing|H|3hrs|4hrs|4hrs|
 |Creating functionality for utility|H|3hrs|2hrs|2hrs|
 |Adding local storage|L| 3hrs|NA|NA|
-| Total | NA| 43.5hrs| 42hrs | 42hrs |
+| Total | NA| 43.5hrs| 42.5hrs | 42.5hrs |
 
 
 ## Code Snippet
