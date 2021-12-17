@@ -14,7 +14,7 @@ async function fetchData(spell) {
     // myStorage = window.localStorage
   } catch (error) {
     const howTo = document.createElement("p");
-    howTo.innerText = "Enter your spell in all lowercase.\nAlso if the spell has two words, separate them with a hyphen(-).\nE.g. misty-step"
+    howTo.innerText = "Enter your spell in all lowercase.\nAlso if the spell has two words, separate them with a hyphen(-).\nE.g. misty-step\n\n This application can only search spells and cantrips from the Player's Handbook."
     divLeftPage.appendChild(howTo);
   } finally {
     console.log("Done.");
