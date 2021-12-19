@@ -8,7 +8,7 @@ async function fetchData(spell) {
     const url = `https://www.dnd5eapi.co/api/spells/${spell}`;
     const response = await axios.get(url);
     const spellData = response.data;
-    console.log(spellData);
+    console.log(spellData)
     showSpellData(spellData)
     damageSpells(spellData)
     // myStorage = window.localStorage
