@@ -163,7 +163,7 @@ You are **responsible** for scheduling time with your squad to seek approval for
 |Dec 14| Pseudocode / actual code | Complete
 |Dec 15| Initial Clickable Model  | Complete
 |Dec 16| MVP | Complete
-|Dec 17| Presentations | Incomplete
+|Dec 17| Presentations | Complete
 
 ## Priority Matrix
 [Priority Matrix Graph](https://whimsical.com/priority-matrix-6kzFUAKyDBqQe9NXnvMpi3")
