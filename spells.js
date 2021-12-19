@@ -222,7 +222,7 @@ searchButton.addEventListener("click", handleInput);
 
 function handleInput(event) {
   event.preventDefault();
-  let inputValue = blankSpace.value;
+  let inputValue = blankSpace.value.toLowerCase();
   blankSpace.value = "";
   fetchData(inputValue);
   // localStorage.setItem(inputValue);
