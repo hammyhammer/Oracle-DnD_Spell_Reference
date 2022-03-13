@@ -128,7 +128,7 @@ footer a {
 
 
 
-@media only screen and (max-width: 510px) { 
+@media only screen and (min-width: 510px) { 
   .browser {
     display: none;
   }
