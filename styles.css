@@ -1,4 +1,20 @@
-body {
+.browser {
+  display: none;
+}
+
+#browser-header {
+  display: none;
+}
+
+#mobile-header {
+  display: flex;
+  justify-content: center;
+  font-size: 5vw;
+}
+
+
+
+/* body {
   margin: auto;
 }
 
@@ -37,7 +53,7 @@ input {
   font-size: 10px;
   font-size: 2vw;
   font-family: cursive;
-  /* border: 4px solid black; */
+  border: 4px solid black;
 }
 
 #above-book {
@@ -140,6 +156,7 @@ footer a {
 
   .mobile {
     display: flex;
+    height: 100%;
   }
 
   h1 {
@@ -179,18 +196,29 @@ footer a {
     text-align: center;
   }
 
+  #above-book {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 4px;
+    width: 100%;
+    height: 5%;
+  }
+
   #search-button {
     width: 30%;
     height: 120%;
     font-size: 10px;
     font-size: 1.75vw;
-    border: 2px solid black;
+    border: 2px solid pink;
     border-radius: 2px;
-
+    padding: 10px 30px;
+    margin: 0px 10px;
   }
 
   #blank-space {
-    border: 2px solid black;
+    border: 2px solid green;
     border-radius: 2px;
   }
 
@@ -204,4 +232,4 @@ footer a {
     height: 5%;
   }
 
-}
+} */
