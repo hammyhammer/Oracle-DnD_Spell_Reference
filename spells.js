@@ -223,7 +223,7 @@ function handleInput(event) {
   event.preventDefault();
   let inputValue = blankSpace.value.toLowerCase();
   blankSpace.value = "";
-  welcome.innerText = ""
+  welcome.style.display = 'none'
   fetchData(inputValue);
   // localStorage.setItem(inputValue);
   removeSpell()

@@ -22,7 +22,7 @@ body {
 
 .book {
   background-image: url("http://bgfons.com/uploads/paper/paper_texture3868.jpg");
-  height: 240vh;
+  height: 100%;
   border: 2px solid purple;
 }
 
@@ -41,13 +41,24 @@ body {
   margin-left: 10px;
 }
 
+.welcome {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 0px 30px;
+  font-size: 5vw;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
 .left-page {
   display: flex;
   flex-direction: column;
   text-align: center;
   height: auto;
   margin: 0px 20px;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;}
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
 
 .right-page {
   display: flex;
