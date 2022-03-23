@@ -20,7 +20,30 @@ body {
   margin: auto;
 }
 
+.book {
+  background-image: url("http://bgfons.com/uploads/paper/paper_texture3868.jpg");
+  height: auto;
+  border: 2px solid purple;
+}
 
+#above-book {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-page {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  /* align-items: center; */
+}
+
+.right-page {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
 
 /* body {
   margin: auto;
