@@ -2,13 +2,13 @@ const divLeftPage = document.querySelector(".left-page");
 const divRightPage = document.querySelector(".right-page");
 const searchButton = document.querySelector("#search-button");
 const blankSpace = document.querySelector("#blank-space");
+let welcome = document.querySelector(".welcome");
 
 async function fetchData(spell) {
   try {
     const url = `https://www.dnd5eapi.co/api/spells/${spell}`;
     const response = await axios.get(url);
     const spellData = response.data;
-    console.log(spellData)
     showSpellData(spellData)
     damageSpells(spellData)
     // myStorage = window.localStorage
@@ -17,7 +17,6 @@ async function fetchData(spell) {
     howTo.innerText = "If the spell or cantrip has two or more words, separate them with a hyphen(-).\nE.g. misty-step or ray-of-frost\n\n This application can only search spells and cantrips from the Player's Handbook."
     divLeftPage.appendChild(howTo);
   } finally {
-    console.log("Done.");
   }
 }
 
@@ -224,12 +223,13 @@ function handleInput(event) {
   event.preventDefault();
   let inputValue = blankSpace.value.toLowerCase();
   blankSpace.value = "";
+  welcome.innerText = ""
   fetchData(inputValue);
   // localStorage.setItem(inputValue);
   removeSpell()
 }
 
 function removeSpell() {
-  divRightPage.innerHTML = "";
-  divLeftPage.innerHTML = "";
+  divRightPage.innerText = "";
+  divLeftPage.innerText = "";
 }
