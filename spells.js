@@ -16,6 +16,7 @@ async function fetchData(spell) {
     const howTo = document.createElement("p");
     howTo.innerText = "If the spell or cantrip has two or more words, separate them with a hyphen(-).\nE.g. misty-step or ray-of-frost\n\n This application can only search spells and cantrips from the Player's Handbook."
     divLeftPage.appendChild(howTo);
+    divLeftPage.style.height = "100vh"
   } finally {
   }
 }
@@ -224,6 +225,7 @@ function handleInput(event) {
   let inputValue = blankSpace.value.toLowerCase();
   blankSpace.value = "";
   welcome.style.display = 'none'
+  divLeftPage.style.height = "auto"
   fetchData(inputValue);
   // localStorage.setItem(inputValue);
   removeSpell()

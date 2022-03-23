@@ -23,7 +23,7 @@ body {
 .book {
   background-image: url("http://bgfons.com/uploads/paper/paper_texture3868.jpg");
   height: 100%;
-  border: 2px solid purple;
+  border: 2px solid black;
 }
 
 #above-book {
@@ -57,6 +57,7 @@ body {
   text-align: center;
   height: auto;
   margin: 0px 20px;
+  font-size: 5vw;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
@@ -66,6 +67,7 @@ body {
   text-align: center;
   height: auto;
   margin: 0px 20px;
+  font-size: 5vw;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
