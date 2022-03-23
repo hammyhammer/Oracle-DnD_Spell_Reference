@@ -45,6 +45,23 @@ body {
   text-align: center;
 }
 
+footer {
+  display: flex;
+  justify-content: flex-end;
+  border: 2px solid red;
+}
+
+.git {
+  width: 10%;
+  height: 10%;
+}
+
+.link {
+  width: 10%;
+  height: 10%;
+}
+
+
 /* body {
   margin: auto;
 }
