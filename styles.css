@@ -16,13 +16,13 @@ body {
   font-size: 5vw;
   background-color: lightgray;
   height: auto;
-  border: 2px solid red;
+  border: 2px solid black;
   margin: auto;
 }
 
 .book {
   background-image: url("http://bgfons.com/uploads/paper/paper_texture3868.jpg");
-  height: auto;
+  height: 100%;
   border: 2px solid purple;
 }
 
@@ -30,12 +30,22 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 20px 0px;
+}
+
+#blank-space {
+  border-radius: 2px solid black;
+}
+
+#search-button {
+  margin-left: 10px;
 }
 
 .left-page {
   display: flex;
   flex-direction: column;
   text-align: center;
+  height: auto;
   /* align-items: center; */
 }
 
@@ -43,24 +53,36 @@ body {
   display: flex;
   flex-direction: column;
   text-align: center;
+  height: auto;
+
 }
 
 footer {
   display: flex;
   justify-content: flex-end;
-  border: 2px solid red;
+  border: 2px solid black;
+  background: lightgray;
 }
 
-.git {
+footer a {
+  display: flex;
+  justify-content: flex-end;
   width: 10%;
   height: 10%;
+  padding: 10px 10px;
 }
 
 .link {
-  width: 10%;
-  height: 10%;
+  display: flex;
+  justify-content: flex-end;
+  width: 60%;
+  height: 60%;
 }
 
+.git {
+  width: 60%;
+  height: 60%;
+}
 
 /* body {
   margin: auto;
