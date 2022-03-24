@@ -110,28 +110,23 @@ footer a {
   }
   
   #search-button {
-    /* margin-left: 10px; */
     padding: 10px 23px;
     font-size: 2.5vw;
   }
   
 }
 
+
+
 @media only screen and (min-width: 1200px) { 
   body {
     height: 100vh;
   }
 
-  .browser {
-    display: flex;
-    width: 100%;
-    height: 100%;
-  }
-  
   #mobile-header {
     display: none;
   }
-  
+
   #browser-header {
     display: flex;
     justify-content: flex-start;
@@ -142,100 +137,10 @@ footer a {
     margin: auto;
   }
 
-  .book {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    background-image: none;
-    height: 100%;
-  }
-
-  #blank-space {
-    padding: 2px 3px;
-
-  }
-  
-  #search-button {
-    margin-left: 10px;
-    padding: 1px 2px;
-  
-  }
-
-  .welcome {
-    position: absolute;
-    top: 20%;
-    left: 27%;
-    width: 30%;
-    font-size: 3vw;
-    height: auto;
-  }
-
-  .left-page {
-    position: absolute;
-    top: 15%;
-    left: 7%;
-    width: 40%;
-    height: 70%;
-    font-size: 2vw;
-    overflow: auto;
-  }
-  
-  .right-page {
-    position: absolute;
-    top: 15%;
-    right: 11%;
-    width: 35%;
-    height: 70%;
-    font-size: 1.75vw;
-    overflow: auto;
-  }
-
-  footer {
-    margin: auto;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: flex-end;
-    border: 4px solid black;
-    background: lightgray;
-  } 
-  
-  footer a {
-    display: flex;
-    justify-content: flex-end;
-    width: 4%;
-    height: 4%;
-  }
-  
-  .link {
-    display: flex;
-    justify-content: flex-end;
-    padding: 10px 30px;
-    width: 60%;
-    height: 60%;
-  }
-  
-  .git {
-    padding: 10px 30px;
-    width: 60%;
-    height: 60%;
-  }
-}
-
-
-
-@media only screen and (min-width: 1200px) { 
-  body {
-    margin: auto;
-  }
-  
   .browser {
-  width: 100%;
-  height: 100%;
-  }
-  
-  #mobile-header {
-    display: none;
+    display: flex;
+    width: 100%;
+    height: 100%;
   }
   
   h1 {
@@ -255,9 +160,13 @@ footer a {
     font-size: 20px;
     font-size: 2vw;
   }
+
   #blank-space {
     font-family: cursive;
+    padding: 2px 3px;
+
   }
+
   #search-button {
     width: 30%;
     height: 112%;
@@ -265,6 +174,7 @@ footer a {
     font-size: 2vw;
     font-family: cursive;
     border: 4px solid black;
+    padding: 10px 23px;
   }
   
   #above-book {
@@ -285,6 +195,16 @@ footer a {
     display: flex;
     flex-direction: row;
     height: 100%;
+    background-image: none;
+  }
+
+  .welcome {
+    position: absolute;
+    top: 20%;
+    left: 29%;
+    width: 30%;
+    font-size: 2vw;
+    height: auto;
   }
   
   .left-page {
