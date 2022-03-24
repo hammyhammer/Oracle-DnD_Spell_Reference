@@ -118,6 +118,10 @@ footer a {
 }
 
 @media only screen and (min-width: 1200px) { 
+  body {
+    height: 100vh;
+  }
+  
   #mobile-header {
     display: none;
   }
@@ -125,7 +129,7 @@ footer a {
   #browser-header {
     display: flex;
     justify-content: flex-start;
-    font-size: 2.75vw;
+    font-size: 3.25vw;
     background-color: lightgray;
     height: auto;
     border: 2px solid black;
@@ -134,10 +138,15 @@ footer a {
 
   .book {
     background-image: url("https://images.unsplash.com/photo-1576611209860-e3ad12547e8d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8YmxhbmslMjBib29rfGVufDB8fDB8fA%3D%3D&w=1000&q=80");
+    background-size: cover;
+    background-position: 90% 10%;
+    background-repeat: none;
+    opacity: 0.95;
   }
 
   #blank-space {
     padding: 2px 3px;
+
   }
   
   #search-button {
@@ -145,6 +154,68 @@ footer a {
     padding: 1px 2px;
   
   }
+
+  .welcome {
+    position: absolute;
+    top: 20%;
+    left: 12%;
+    width: 30%;
+    font-size: 3vw;
+    height: auto;
+  }
+
+  .left-page {
+    position: absolute;
+    top: 15%;
+    left: 7%;
+    width: 40%;
+    height: 70%;
+    font-size: 2vw;
+    overflow: auto;
+  }
+  
+  .right-page {
+    position: absolute;
+    top: 15%;
+    right: 11%;
+    width: 35%;
+    height: 70%;
+    font-size: 1.75vw;
+    overflow: auto;
+  }
+
+  /* footer {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-end;
+    border: 4px solid black;
+    background: lightgray;
+  } */
+  
+  footer a {
+    display: flex;
+    justify-content: flex-end;
+    width: 4%;
+    height: 4%;
+  }
+  
+  .link {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 30px;
+    width: 60%;
+    height: 60%;
+  }
+  
+  .git {
+    padding: 10px 30px;
+    width: 60%;
+    height: 60%;
+  }
+
+
 }
 
 
